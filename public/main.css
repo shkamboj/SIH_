@@ -1,0 +1,225 @@
+body {
+    width: 100wh;
+    height: 90vh;
+    color: #fff;
+    background: linear-gradient(-45deg, rgb(216, 76, 34), rgb(226, 206, 20), rgba(21, 77, 97, 0.548), #23D5AB);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+#animatedBanner {
+    width: 650px;
+    height: 350px;
+    background: #000 url('https://www.publicdomainpictures.net/pictures/130000/velka/abstract-wallpaper-1442844111BON.jpg');
+    margin: 10vh auto 0;
+    background-color: 2px solid rgb(63, 61, 56);
+}
+
+#topDoor {
+    position: absolute;
+    width: 650px;
+    height: 175px;
+    background: url('https://cdn.shopify.com/s/files/1/0638/4395/products/simulation-wall-05_1024x1024.jpg?v=1525349246') no-repeat center bottom;
+    animation: topOpen 1s ease 1s 1 forwards;
+}
+
+#bottomDoor {
+    position: absolute;
+    width: 650px;
+    height: 175px;
+    background: url('https://cdn.shopify.com/s/files/1/0638/4395/products/simulation-wall-05_1024x1024.jpg?v=1525349246') no-repeat center top;
+    margin-top: 175px;
+    animation: bottomOpen 1s ease 1s 1 forwards;
+}
+
+#gaming {
+    position: absolute;
+    opacity: 0;
+    height: 35px;
+    margin: 175px 0px 350px 0px;
+    animation: flyIn 1s ease 2s 1 forwards;
+}
+
+#ronaldo {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    opacity: 0;
+    height: 30px;
+    margin: 125px 0px 0px 155px;
+    animation: moveUp 1s ease 2s 1 forwards;
+}
+
+#text {
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: rgb(224, 230, 228);
+    animation: login 1s ease 4s 1 forwards;
+    font-size: 30px;
+    position: absolute;
+    opacity: 0;
+    margin: 250px 0px 0px 450px;
+    padding-top: 280px;
+    padding-left: 90px;
+}
+
+@keyframes topOpen {
+    0% {
+        height: 175px;
+    }
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes bottomOpen {
+    0% {
+        height: 175px;
+        margin-top: 175px;
+    }
+    100% {
+        height: 0px;
+        margin-top: 350px;
+    }
+}
+
+@keyframes flyIn {
+    0% {
+        height: 35px;
+        margin: 175px 0px 350px 0px;
+        opacity: 1;
+    }
+    100% {
+        height: 175px;
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        height: 35px;
+        margin: 175px 0px 250px 0px;
+        opacity: 1;
+    }
+    100% {
+        height: 250px;
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes login {
+    0% {
+        height: 5px;
+        margin: 0px 0px 175px 0px;
+        opacity: 0;
+    }
+    100% {
+        height: 35px;
+        margin: 0px;
+        opacity: 1;
+    }
+}
+
+header {
+    font-size-adjust: inherit;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
+.details {
+    text-align: justify;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 2.5vh;
+    color: rgb(196, 210, 212);
+    border-radius: 5px 5px 0 0;
+    font-weight: bolder;
+  font-size: 12px;
+}
+
+#head {
+    text-align: justify;
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: rgb(24, 117, 86);
+    font-size: 40px;
+}
+
+#logo {
+    font-family: 'Bangers', cursive;
+    color: rgb(24, 182, 116);
+}
+
+#welc {
+    color: rgb(199, 138, 8)
+}
+
+#to {
+    color: rgb(105, 49, 138);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.527);
+    transition: 0.3s;
+    width: 90%;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.527);
+}
+
+.list {
+    font-family: 'Fugaz One', cursive;
+}
+
+.topnav-right {
+    overflow: hidden;
+    float: right;
+}
+
+a:hover {
+    color: aqua;
+}

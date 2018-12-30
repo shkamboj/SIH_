@@ -1,69 +1,93 @@
-<div class= "main-wrapper">
-  <button class= "up-down"><i class="fa fa-angle-up"></i></button>
-  <div class= "header"> <!-- div 1-->
-    <div class= "navbar">
-     <span id= "logo-name-1">Quebec</span>
-   <span id= "logo-name-2">Academics</span>
-      <ul>
-        <li><a href= "#">New Student</a></li>
-        <li><a href= "#">Sign Up !</a></li>
-      </ul>
-    </div>
-    <div class= "intro">
-    <span id= "spn-1">
-      <h1> Welcome<br/> to<br/> FoodCubo</h1>
-      </span>
-      <div class= "search">
-        <input type= "text" size= "35" placeholder= "enter address">&nbsp;<button>find food &nbsp;<i class= "fa fa-map-marker-alt"></i></button>
-      </div>
-  </div>
-  </div>
-  <div class= "service"><!-- div 2-->
-    <h1> cuisines</h1>
-    <div class= "image">
-    <div class= " item-1">
-      <div class= "item">
-        <span>Indian</span>  
-      </div>
-    </div>
-    <div class= " item-2">
-    <div class= "item">
-        <span>Mexican</span>  
-      </div>
-      </div>
-    <div class= "item-3">
-  <div class= "item">
-        <span>Desserts</span>  
-      </div>
-      </div>
-    <div class= "item-4">
-    <div class= "item">
-        <span>Italian</span>  
-      </div>
-      </div>
-    </div>
-    <span id= "spn-3"> many more</span>
-  </div>
-  <div class= "footer"><!-- div 3-->
-    <div class= "logo"></div>
-    <div class= "general">
-      <ul>
-        <li><a href= "#">About</a></li>
-        <li><a href= "#">How it Works ?</a></li>
-        <li><a href= "#">Blog</a></li>
-        <li><a href= "#">Contact Us</a></li>
-      </ul>
-      <span> Social Media:
-        <div class= "icons">
-        <i class="fab fa-instagram fa-xs"></i>
-          <i class="fab fa-facebook-f fa-xs"></i>
-          <i class="fab fa-twitter fa-xs"></i>
-          </div>
-        </span>
-    </div>
-  </div>
+<html>
 
-  <span id= "spn-4"><i class= "fa fa-copyright"></i>
-  &nbsp; Copyrights to : FoodCuBo
-  </span>
-</div>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title style="font-family: 'Lucida Sans';">Welcome to the Code-Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Luckiest+Guy|Syncopate" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://localhost:4200" id="logo">Québec</a>
+            </div>
+            <ul class="nav navbar-nav list">
+                <li class="active">
+                    <a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">Information</a>
+                </li>
+            </ul>
+            <ul class="list topnav-right">
+                <li>
+                    <a href="#">Sign In</a>
+                </li>
+                <li>
+                    <a href="#">Register</a>
+                </li> 
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <header id="head">
+            <div class="row">
+                <div class="col-md-12" id="head">
+                    <marquee style="text-align: center;" behavior="slide" direction="up">
+                        <strong>
+                            <span id="welc1">Welcome </span>
+                            <span id="to1"> to </span>Québec</strong>
+                    </marquee>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card" class="col-md-8">
+                        <p class="details">
+                            <strong> A gamertag is your alter ego in the Xbox world. It’s made from an alias, an optional avatar or
+                                picture (called a gamerpic), and a bit of info to represent you when you’re playing games
+                                and sharing with other people in the Xbox community.
+                            </strong>
+                        </p>
+                        <p class="details">
+                            Tag is a playground game that involves two or more players chasing other players in an attempt to "tag" or touch them, usually
+                            with their hands. There are many variations; most forms have no teams, scores, or equipment.
+                            Usually when a person is tagged, the tagger says, "Tag, you're it"
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="animatedBanner" class="img-responsive">
+                        <div id="topDoor"></div>
+                        <div id="bottomDoor"></div>
+                        <!-- <img src="https://clipart.info/images/ccovers/1505146940cristiano-ronaldo-png-2018-FIFA18-EA-Sports.png" id="ronaldo" height="350px" width="350px" align="right"> -->
+                        <div id="text" align="bottom">
+                            <a href="#" style="color: aqua">Login</a> to know more about Québec</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
