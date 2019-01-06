@@ -30,73 +30,73 @@ app.get('/',function(req, res){
   res.send("HI");
 })
 
-// app.get('/', function(req, res) {
-//   var list = quizzer.getCategories();
-//   console.log(list);
+app.get('/', function(req, res) {
+  var list = quizzer.getCategories();
+  console.log(list);
 
-//   // load the index.html template
-//   fs.readFile(__dirname + '/public/index.html', function(err, data) {
-//     if(err) throw err;
+  // load the index.html template
+  fs.readFile(__dirname + '/public/index.html', function(err, data) {
+    if(err) throw err;
 
-//     // populate it with templated questions from the node-quizzer module
-//     var compiled = _.template(data.toString());
-//     res.send(compiled({ availableQuizzes: list }));
-//   });
-// });
+    // populate it with templated questions from the node-quizzer module
+    var compiled = _.template(data.toString());
+    res.send(compiled({ availableQuizzes: list }));
+  });
+});
 
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// app.get('/quiz', function(req, res) {
-//   var quiz = getQuiz('generate', req);
+app.get('/quiz', function(req, res) {
+  var quiz = getQuiz('generate', req);
 
-//   // load the quiz.html template
-//   fs.readFile(__dirname + '/public/quiz.html', function(err, data) {
-//     if(err) throw err;
+  // load the quiz.html template
+  fs.readFile(__dirname + '/public/quiz.html', function(err, data) {
+    if(err) throw err;
 
-//     // populate it with templated questions from the node-quizzer module
-//     var compiled = _.template(data.toString());
-//     res.send(compiled({ quiz: quiz }));
-//   });
-// });
+    // populate it with templated questions from the node-quizzer module
+    var compiled = _.template(data.toString());
+    res.send(compiled({ quiz: quiz }));
+  });
+});
 
-// app.get('/tokenize', function(req, res) {
-//   var quiz = getQuiz('tokenize', req),
-//     tokenUrl = req.protocol + '://' + req.get('host') + "/quiz/" + quiz.quid;
+app.get('/tokenize', function(req, res) {
+  var quiz = getQuiz('tokenize', req),
+    tokenUrl = req.protocol + '://' + req.get('host') + "/quiz/" + quiz.quid;
 
-//   res.set('Content-Type', 'text/plain');
-//   res.send(tokenUrl);
-// });
+  res.set('Content-Type', 'text/plain');
+  res.send(tokenUrl);
+});
 
-// app.get('/quiz/:id', function(req, res) {
-//   var quiz = quizzer.fromToken(req.params.id);
+app.get('/quiz/:id', function(req, res) {
+  var quiz = quizzer.fromToken(req.params.id);
 
-//   // load the quiz.html template
-//   if(quiz) {
-//     fs.readFile(__dirname + '/public/quiz.html', function(err, data) {
-//       if(err) throw err;
+  // load the quiz.html template
+  if(quiz) {
+    fs.readFile(__dirname + '/public/quiz.html', function(err, data) {
+      if(err) throw err;
 
-//       // populate it with templated questions from the node-quizzer module
-//       var compiled = _.template(data.toString());
-//       res.send(compiled({ quiz: quiz }));
-//     });
-//   } else {
-//     res.send("This token has expired!");
-//   }
-// })
+      // populate it with templated questions from the node-quizzer module
+      var compiled = _.template(data.toString());
+      res.send(compiled({ quiz: quiz }));
+    });
+  } else {
+    res.send("This token has expired!");
+  }
+})
 
-// app.get('/review', function(req, res) {
-//   var urlParts = url.parse(req.url, true),
-//     query = urlParts.query,
-//     results = quizzer.evaluate(query);
+app.get('/review', function(req, res) {
+  var urlParts = url.parse(req.url, true),
+    query = urlParts.query,
+    results = quizzer.evaluate(query);
 
-//   // load the review.html template
-//   fs.readFile(__dirname + '/public/review.html', function(err, data) {
-//     if(err) throw err;
+  // load the review.html template
+  fs.readFile(__dirname + '/public/review.html', function(err, data) {
+    if(err) throw err;
 
-//     // populate it with templated questions from the node-quizzer module
-//     var compiled = _.template(data.toString());
-//     res.send(compiled({ results: results }));
-//   });
-// });
+    // populate it with templated questions from the node-quizzer module
+    var compiled = _.template(data.toString());
+    res.send(compiled({ results: results }));
+  });
+});
 
 app.listen(PORT);
