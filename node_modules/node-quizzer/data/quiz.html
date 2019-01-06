@@ -1,0 +1,122 @@
+<form class="quizzer" action="/review" method="get">
+  <div class="stats">
+    <p>You have <span class="time-remaining"></span> to complete this quiz.</p>
+  </div>
+  <input type="hidden" name="quid" value="<%= opts.quid %>" readonly>
+
+  <ul id="impress">
+    <li class="step slide center">
+      <h4>Welcome <%= opts.uname %></h4>
+      <p>Your quiz consists of <%= opts.count %> <%= opts.name %> questions.</p>
+      <br>
+      <p class="text text-warning">The time you have remaining for the completion of this test is displayed above.</p>
+      <p>You must answer correctly at least <%= opts.perc %>% of these questions to pass.</p>
+      <br>
+      <p>Use the keyboard arrows to move through the questions(up &amp; down or left &amp; right)</p>
+      <p class="text text-warning">This quiz will be submitted automatically when the allotted time passes.</p>
+    </li>
+  <% _.each(questions, function(q) { %>
+    <li class="step slide">
+      <h4><%= q.title %></h4>
+      <% if(!q.graded) {%>
+        <span class="label label-info not-graded">This question won't affect your final grade.</span>
+      <% } %>
+      <% if (q.desc) { %>
+      <p><%= q.desc %></p>
+      <% } %>
+
+      <% if (q.code) { %>
+      <pre class="prettyprint lang-<%= q.lang %>"><%= q.code %></pre>
+      <% } %>
+
+      <% if (q.opts) { %>
+        <ul>
+          <li>
+            <p>Answer:</p>
+          </li>
+        <% _.each(q.opts, function(opt, i) { %>
+          <% if (q.type == "0") { %>
+          <li>
+            <label>
+               <input type="radio" name="<%= q.qid %>T" value="<%= i %>" />
+               <%= opt %>
+            </label>
+          </li>
+          <% } %>
+          <% if (q.type == "1") { %>
+          <li>
+            <label>
+               <input type="checkbox" name="<%= q.qid %>T<%= i %>" />
+               <%= opt %>
+            </label>
+          </li>
+          <% } %>
+        <% }); %>
+        </ul>
+      <% } %>
+
+      <% if (!q.opts) { %>
+        <p>Answer:</p>
+        <% if (q.type == "2") { %>
+          <input type="text" name="<%= q.qid %>F" placeholder="Write your answer here"/>
+        <% } %>
+        <% if (q.type == "3") { %>
+          <textarea name="<%= q.qid %>F" rows="5" placeholder="Write your answer here"></textarea>
+        <% } %>
+      <% } %>
+    </li>
+  <% }); %>
+    <li class="step slide center">
+      <h4>Thank you <%= opts.uname %></h4>
+      <p>Please submit your test by clicking the button bellow.</p>
+      <br>
+      <button type="submit" class="btn btn-primary">Submit for review</button>
+    </li>
+  </ul>
+  <script type="text/javascript">
+    (function () {
+      var interval;
+      function startTimer(duration, display, complete) {
+        var start = Date.now(),
+          diff,
+          minutes,
+          seconds,
+          timer = function() {
+            // get the number of seconds that have elapsed since
+            // startTimer() was called
+            diff = duration - (((Date.now() - start) / 1000) | 0);
+
+            // does the same job as parseInt truncates the float
+            minutes = (diff / 60) | 0;
+            seconds = (diff % 60) | 0;
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if(diff <= 0) {
+              complete();
+            }
+          };
+
+        // start timer
+        timer();
+
+        // countdown every second
+        interval = setInterval(timer, 1000);
+      }
+      var allowedTime = 60 * parseFloat("<%= opts.time %>"),
+        display = document.querySelector('.time-remaining'),
+        onComplete = function() {
+          clearInterval(interval);
+          document.querySelector("form.quizzer").submit();
+        };
+
+      // start the timer
+      startTimer(allowedTime, display, onComplete);
+    }());
+  </script>
+
+
+</form>
