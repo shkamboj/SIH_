@@ -1,21 +1,16 @@
-var
-  express = require('express'),
-  url = require('url'),
-  fs = require('fs'),
-  path = require('path'),
-  app = express(),
-  quizzer = require('node-quizzer'),
-  _ = require('underscore-node');
-
-  app.set('port', (process.env.PORT || 5000));
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 
-app.get('/', function(req, res) {
-  res.send("HI");
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(bodyParser.json());
+
+
+app.get('/', function (req, res) {
+    res.send('hi Gopesh');
 });
 
-
-
-app.listen(app.get('port'), function() {
-    console.log('running on port', app.get('port'));
-});
+app.listen(PORT);
