@@ -5,23 +5,7 @@ var
   path = require('path'),
   app = express(),
   quizzer = require('node-quizzer'),
-  _ = require('underscore-node'),
-  getQuiz = function(method, req) {
-    var urlParts = url.parse(req.url, true),
-      query = urlParts.query,
-
-      // generate random quiz
-      quiz = quizzer[method]({
-        uname: query.fullname,
-        uemail: query.email,
-        name: query.quiz,
-        count: parseInt(query.count),
-        time: parseInt(query.time),
-        perc: parseInt(query.perc)
-      });
-
-    return quiz;
-  };
+  _ = require('underscore-node');
 
   app.set('port', (process.env.PORT || 5000));
 
