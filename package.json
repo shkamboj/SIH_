@@ -23,6 +23,7 @@
     "express": "^4.16.4",
     "mongodb": "^3.1.10",
     "mongoose": "^5.4.1",
-    "node-quizzer": "^2.0.4"
+    "node-quizzer": "^2.0.4",
+    "password-hash": "^1.2.2"
   }
 }

@@ -2,8 +2,10 @@ var
   express = require('express'),
   url = require('url'),
   fs = require('fs'),
+  mongoose = require('mongoose'),
   path = require('path'),
   quizzer = require('node-quizzer'),
+  passwordHash = require('password-hash'),
   _ = require('underscore-node'),
   getQuiz = function(method, req) {
     var urlParts = url.parse(req.url, true),
@@ -27,6 +29,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 
+var uri = 'mongodb://amit:amit123@ds237072.mlab.com:37072/quizapp';
+
+ 
+mongoose.connect(uri);
+
+
 app.get('/', function(req, res) {
   var list = quizzer.getCategories();
   console.log(list);
@@ -40,6 +48,9 @@ app.get('/', function(req, res) {
     res.send(compiled({ availableQuizzes: list }));
   });
 });
+
+
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
