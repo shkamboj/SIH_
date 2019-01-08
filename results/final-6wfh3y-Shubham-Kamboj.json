@@ -1,0 +1,200 @@
+{
+  "correct": [],
+  "stats": {
+    "quiz": {
+      "uname": "Shubham Kamboj",
+      "uemail": "iiitu16118@gmail.com",
+      "name": "nodejs",
+      "count": 10,
+      "time": 10,
+      "perc": 50,
+      "quid": "6wfh3y",
+      "questions": [
+        {
+          "qid": 3,
+          "graded": true,
+          "type": 1,
+          "desc": null,
+          "code": null,
+          "lang": null,
+          "title": "What npm stands for?",
+          "opts": [
+            "Node Package Manager",
+            "Node Project Manager",
+            "New Project Manager",
+            "New Package Manager"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "qid": 28,
+          "graded": true,
+          "type": 1,
+          "desc": null,
+          "code": null,
+          "lang": null,
+          "title": "Which of the following code print the platform of operating system?",
+          "opts": [
+            "console.log('platform : ' + os.platform);",
+            "console.log('platform : ' + os.platform());",
+            "console.log('platform : ' + os.getPlatform());",
+            "None of the above."
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "qid": 8,
+          "graded": true,
+          "type": 1,
+          "desc": null,
+          "code": null,
+          "lang": null,
+          "title": "Which of the following is the correct way to get a joint path?",
+          "opts": [
+            "path.join('/test', 'test1', '2slashes/1slash', 'tab', '..')",
+            "path.combine('/test', 'test1', '2slashes/1slash', 'tab', '..')",
+            "buffer.join('/test', 'test1', '2slashes/1slash', 'tab', '..')",
+            "None of the above."
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "qid": 21,
+          "graded": true,
+          "type": 0,
+          "desc": null,
+          "code": null,
+          "lang": null,
+          "title": "A stream fires data event when there is data available to read.",
+          "opts": [
+            "false",
+            "true"
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "qid": 14,
+          "graded": true,
+          "type": 1,
+          "desc": null,
+          "code": null,
+          "lang": null,
+          "title": "Which of the following code converts a buffer buf to JSON object?",
+          "opts": [
+            "buf.toJSON()",
+            "buf.json()",
+            "buf.covertToJson()",
+            "buf.jsonify()"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "qid": 34,
+          "graded": true,
+          "type": 1,
+          "desc": null,
+          "code": null,
+          "lang": null,
+          "title": "Which of the following provides in-built events.",
+          "opts": [
+            "events",
+            "callback",
+            "throw",
+            "handler"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "qid": 25,
+          "graded": true,
+          "type": 1,
+          "desc": null,
+          "code": null,
+          "lang": null,
+          "title": "Which method of fs module is used to close a file?",
+          "opts": [
+            "fs.close(fd, callback)",
+            "fs.closeFile(fd, callback)",
+            "fs.closePath(fd, callback)",
+            "None of the above."
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "qid": 6,
+          "graded": true,
+          "type": 1,
+          "desc": null,
+          "code": null,
+          "lang": null,
+          "title": "Which method of fs module is used to truncate a file?",
+          "opts": [
+            "fs.delete(fd, len, callback)",
+            "fs.remove(fd, len, callback)",
+            "fs.ftruncate(fd, len, callback)",
+            "None of the above."
+          ],
+          "correct": [
+            2
+          ]
+        },
+        {
+          "qid": 29,
+          "graded": true,
+          "type": 1,
+          "desc": null,
+          "code": null,
+          "lang": null,
+          "title": "Which of the following stands true for dns.lookup(hostname[, options], callback) method?",
+          "opts": [
+            "Resolves a hostname (e.g. 'google.com') into the first found A (IPv4) or AAAA (IPv6) record.",
+            "If options is not provided, then IP v4 and v6 addresses are both valid. If options is an integer, then it must be 4 or 6.",
+            "Both of the above.",
+            "None of the above."
+          ],
+          "correct": [
+            2
+          ]
+        },
+        {
+          "qid": 24,
+          "graded": true,
+          "type": 1,
+          "desc": null,
+          "code": null,
+          "lang": null,
+          "title": "Which of the following code converts a buffer buf to JSON object?",
+          "opts": [
+            "buf.toJSON()",
+            "buf.json()",
+            "buf.covertToJson()",
+            "buf.jsonify()"
+          ],
+          "correct": [
+            0
+          ]
+        }
+      ]
+    },
+    "correct": 0,
+    "ungraded": 0,
+    "unevaluated": [],
+    "total": 10,
+    "perc": 0,
+    "pass": false
+  }
+}
