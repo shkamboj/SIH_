@@ -1,0 +1,91 @@
+<head>
+<style>
+.article * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.article body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.article .card {
+  display: flex;
+  width : 50%;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: auto;
+  margin-bottom: 20px;
+  
+  padding: 40px;
+  width: 400px;
+  box-shadow: 0 3px 10px 0 rgba(91, 87, 158, 0.15);
+  border-top: 3px solid #5b579e;
+
+  &__title {
+    position: relative;
+    font-size: 22px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    color: #636363;
+    text-align: center;
+    letter-spacing: 1.4px;
+    line-height: 1.3;
+
+    &:before {
+      position: absolute;
+      content: "Новинский";
+      top: -25%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 24px;
+      color: rgba(91, 87, 158, 0.3);
+      opacity: 0;
+      transition: 0.4s ease-in-out;
+    }
+  }
+
+  &__line {
+    margin: 20px auto;
+    width: 50px;
+    height: 2px;
+    background: #5b579e;
+  }
+
+  &__body {
+    font-family: "Roboto", sans-serif;
+    color: #8e8e8e;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+
+}
+
+.article .card:hover .card__title:before {
+  opacity: 1;
+  top: -60%;
+}
+
+</style>
+</head>
+
+
+
+<div class="article">
+<div class="container">
+  <div class="card">
+    <h3 class="card__title">Новинский бульвар в Истории Москвы</h3>
+    <div class="card__line"></div>
+    <p class="card__body">Зелёный бульвар на Новинском гулянии был устроен только в 1860-е гг.; в торце бульвара, выходящем на Кудринскую площадь, стояло гостиничное здание, снесённое (как и сам бульвар) в 1937 г. В связи с посадкой деревьев народное гуляние было в 1862 году
+      перенесено в самый центр города, на Красную площадь и Болотную площадь, а также на Девичье Поле. Гуляние на Красной площади просуществовало до 1914 года.</p>
+  </div>
+</div>
+</div>
