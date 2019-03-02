@@ -12,9 +12,6 @@ body {
   margin-top: -150px;
 }
 
-
-<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=yes">
-
 .popup-trigger {
   display: block;
   margin: 0 auto;
@@ -84,8 +81,9 @@ p {
   padding: 30px 15px;
   /* Width of popup can be changed */
   width: 100%;
-  height: 82%;
-  max-width: 1000px;
+  height: 100%;
+  max-width: 500px;
+  max-height: 2000px;
   z-index: 5001;
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
