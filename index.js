@@ -20,7 +20,7 @@ app.use('/static',express.static(__dirname + '/public'));
 
 
 app.get('/', function(req, res) {
-  res.send('the losers');
+  res.render('first');
 });
 
 app.get('/tender', function(req, res) {
@@ -37,7 +37,7 @@ app.get('/car', function(req, res) {
 });
 
 
-app.get('/header', function(req, res) {
+app.get('/download1bid', function(req, res) {
   res.render('linking');
 });
 
