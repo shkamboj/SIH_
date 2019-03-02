@@ -1,0 +1,111 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.article * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+.article body {
+  height: 100vh;
+  width: 70vw;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.article .card {
+  display: flex;
+  width : 400px;
+  margin-top: 20px;
+  margin-left : 20px;
+  margin-right: 0px;
+  padding-right:20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  width: 300px;
+  box-shadow: 0 3px 10px 0 rgba(91, 87, 158, 0.15);
+  border-top: 3px solid #5b579e;
+
+  &__title {
+    position: relative;
+    font-size: 22px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    color: #636363;
+    text-align: center;
+    letter-spacing: 1.4px;
+    line-height: 1.3;
+
+    &:before {
+      position: absolute;
+      content: "Новинский";
+      top: -25%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 24px;
+      color: rgba(91, 87, 158, 0.3);
+      opacity: 0;
+      transition: 0.4s ease-in-out;
+    }
+  }
+
+  &__line {
+    margin: 20px auto;
+    width: 50px;
+    height: 2px;
+    background: #5b579e;
+  }
+
+  &__body {
+    font-family: "Roboto", sans-serif;
+    color: #8e8e8e;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+
+}
+
+.article .card:hover .card__title:before {
+  opacity: 1;
+  top: -60%;
+}
+
+</style>
+</head>
+
+
+<center>
+
+<table column=1 cellspacing="0" cellpadding="0">
+    <col width="500">
+    <th>
+        <tr> <td><div class="article">
+<div class="container">
+
+  <div class="card">
+    <div class="card__line"></div>
+    <p class="card__body">
+    On this page click on the e-SRM guide button for having the guide to operate the e-SRM application.
+    Some particular instructions also need be followed :
+    1. Use Internet Explores browser only.
+    2. 
+    </p>
+  </div>
+</div>
+</div></td><td></tr>
+    </th>
+</table>
+
+
+
+
+
+
+
+
