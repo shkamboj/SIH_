@@ -12,6 +12,9 @@ body {
   margin-top: -150px;
 }
 
+
+<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=yes">
+
 .popup-trigger {
   display: block;
   margin: 0 auto;
