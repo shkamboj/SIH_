@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+// for display purposes
+* {
+  margin: 2rem;
+}
+
+// Colors
+$primary-color: #607e97;
+$secondary-color: hotpink;
+
+//Mixins
+@mixin easeOut {
+  transition: all 0.5s ease-in;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background: white;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .165em;
+  text-align: center;
+  background-color: $primary-color;
+  padding: 1.2em 4em;
+  text-transform: uppercase;
+  @include easeOut;
+  
+  &:hover,
+  &:focus {
+  background-color: darken($primary-color, 20);
+  }
+}
+
+.btn-normal {
+  @extend .btn;
+}
+
+.btn-shadow {
+  @extend .btn;
+  box-shadow: 12px 15px 20px rgba(0,0,0,.1);
+  
+  &:hover,
+  &:focus {
+  box-shadow: 2px 4px 8px 0 rgba(0,0,0,.1);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $primary-color
+}
+
+// Link with thick underline
+.link-thick {
+  @extend .link;
+  position: relative;
+  
+  &span {
+    position: relative;
+  }
+    
+  &:before {
+    z-index: 2;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 4px;
+    background: $secondary-color;
+    width: 0%;
+    @include easeOut;
+  }
+    &:hover:before,
+    &:focus:before {
+    width: 100%;
+  }
+  
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      height: 4px;
+      background: $primary-color;
+      width: 100%;
+  }
+}
+
+// Link with thick underline and full background on hover
+.link-thick-background {
+  @extend .link;
+  
+  color: black;
+  border-bottom: 2px solid lighten($primary-color, 40);
+  box-shadow: inset 0 -4px 0 lighten($primary-color, 40);
+  transition: background 0.1s cubic-bezier(.33,.66,.66,1);
+  
+  &:hover,
+  &:focus {
+     background-color: lighten($primary-color, 40);
+  }
+}
+
+.link-background {
+  @extend .link;
+  
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(to bottom, $primary-color 10%, $secondary-color 67%);
+  background-size: 100% 300%;
+  background-position: 0 0%;
+  transition-property: background-position;
+  transition-duration: 0.5s;
+  
+  &:hover,
+  &:focus {
+    background-position: 0 100%;
+    outline: none;
+  }
+}

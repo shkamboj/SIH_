@@ -27,6 +27,10 @@ app.get('/tender', function(req, res) {
   res.render('tender');
 });
 
+app.get('/home', function(req, res) {
+  res.render('front');
+});
+
 
 app.get('/car', function(req, res) {
   res.render('car');
