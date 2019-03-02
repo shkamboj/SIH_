@@ -1,0 +1,89 @@
+
+ul, body, p {
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  box-sizing: border-box;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider .slides-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
+  transition: transform .5s;
+}
+
+.slider:active .slides-container {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.slider .slides-container.moving {
+  transition: none;
+}
+.slider .slides-container.moving .slide {
+  transition: none;
+}
+.slider .slides-container.moving .parallax {
+  transition: none;
+}
+
+.slider .slide {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #1abc9c;
+  opacity: .8;
+  transform: scale(.9);
+  transform-origin: center;
+  transition: transform .5s, opacity .5s;
+}
+
+.slider .slide.current {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slider .slide .parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .5s, opacity .5s;
+}
+
+.slider .slide.current .parallax {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.slider .slide .parallax p {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  font-family: Circular, sans-serif;
+  font-size: 3em;
+}
+
+
+.slider .slide:nth-child(6n+2) { background: #e74c3c; }
+.slider .slide:nth-child(6n+3) { background: #3498db; }
+.slider .slide:nth-child(6n+4) { background: #9b59b6; }
+.slider .slide:nth-child(6n+5) { background: #34495e; }
+.slider .slide:nth-child(6n+6) { background: #f1c40f; }

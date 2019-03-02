@@ -28,6 +28,11 @@ app.get('/tender', function(req, res) {
 });
 
 
+app.get('/car', function(req, res) {
+  res.render('car');
+});
+
+
 app.get('/header', function(req, res) {
   res.render('linking');
 });

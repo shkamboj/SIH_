@@ -63,6 +63,7 @@ p {
 }
 
 .popup {
+
   background: rgba(100, 100, 100, 0.6);
   position: fixed;
   display: none;
@@ -81,9 +82,8 @@ p {
   padding: 30px 15px;
   /* Width of popup can be changed */
   width: 100%;
-  height: 100%;
-  max-width: 500px;
-  max-height: 2000px;
+  height: 82%;
+  max-width: 1000px;
   z-index: 5001;
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -93,6 +93,11 @@ p {
   top: 50%;
   text-align: left;
   border: 5px solid #f28920;
+}
+
+.popup>div img {
+  margin-top: 70px;
+
 }
 
 .popup-btn-close {
