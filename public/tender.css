@@ -76,6 +76,7 @@ p {
   padding: 30px 15px;
   /* Width of popup can be changed */
   width: 70%;
+  height: 40%;
   max-width: 600px;
   z-index: 5001;
   -moz-transform: translate(-50%, -50%);
