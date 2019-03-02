@@ -1,4 +1,0 @@
-Latest Version of Python3
-Flask
-Pymessenger
-nltk
