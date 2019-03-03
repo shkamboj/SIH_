@@ -48,9 +48,6 @@ app.get('/req4', function(req, res) {
   res.render('req4');
 });
 
-app.get('/chatbot', function(req, res) {
-  res.redirect('');
-});
 
 app.get('/home', function(req, res) {
   res.render('front');
@@ -61,6 +58,10 @@ app.get('/car', function(req, res) {
   res.render('car');
 });
 
+
+app.get('/chatbot', function(req, res) {
+  res.redirect('https://www.messenger.com/t/638011726633184');
+});
 
 app.get('/download1bid', function(req, res) {
   res.render('linking');
