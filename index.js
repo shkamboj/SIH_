@@ -8,7 +8,7 @@ var
 
 
 const app = express();
-const PORT = process.env.PORT || 5100;
+const PORT = process.env.PORT || 5200;
 
 
 app.set('view engine', 'ejs');
@@ -25,6 +25,14 @@ app.get('/', function(req, res) {
 
 app.get('/tender', function(req, res) {
   res.render('tender');
+});
+
+app.get('/home1', function(req, res) {
+  res.render('home1');
+});
+
+app.get('/queries', function(req, res) {
+  res.render('ques');
 });
 
 app.get('/home', function(req, res) {
