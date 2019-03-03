@@ -27,14 +27,26 @@ app.get('/tender', function(req, res) {
   res.render('tender');
 });
 
-app.get('/home1', function(req, res) {
-  res.render('home1');
+app.get('/home', function(req, res) {
+  res.render('main');
 });
 
-app.get('/queries', function(req, res) {
-  res.render('ques');
+app.get('/req1', function(req, res) {
+  res.render('req1');
 });
 
+app.get('/req2', function(req, res) {
+  res.render('req2');
+});
+
+
+app.get('/req3', function(req, res) {
+  res.render('req3');
+});
+
+app.get('/req4', function(req, res) {
+  res.render('req4');
+});
 
 app.get('/chatbot', function(req, res) {
   res.redirect('');
