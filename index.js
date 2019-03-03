@@ -8,7 +8,7 @@ var
 
 
 const app = express();
-const PORT = process.env.PORT || 5200;
+const PORT = process.env.PORT || 5300;
 
 
 app.set('view engine', 'ejs');
@@ -33,6 +33,11 @@ app.get('/home1', function(req, res) {
 
 app.get('/queries', function(req, res) {
   res.render('ques');
+});
+
+
+app.get('/chatbot', function(req, res) {
+  res.redirect('m.me/638011726633184');
 });
 
 app.get('/home', function(req, res) {
