@@ -37,7 +37,7 @@ app.get('/queries', function(req, res) {
 
 
 app.get('/chatbot', function(req, res) {
-  res.redirect('m.me/638011726633184');
+  res.redirect('');
 });
 
 app.get('/home', function(req, res) {
